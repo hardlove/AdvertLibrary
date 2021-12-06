@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 自定义样式选项，必须继承TTDislikeListView -->
+    <com.bytedance.sdk.openadsdk.dislike.TTDislikeListView
+        android:id="@+id/fhad_dislike_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

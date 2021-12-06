@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fhad_iv_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/fhad_ic_delete" />
+
+    <RelativeLayout
+        android:id="@+id/fhad_rl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></RelativeLayout>
+</LinearLayout>

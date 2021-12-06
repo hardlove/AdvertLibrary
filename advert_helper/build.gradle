@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.sqm'
+android {
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        resourcePrefix "advert_helper_"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api project(path: ':thl_advertlibrary')
+    api 'com.blankj:utilcodex:1.30.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    //状态栏
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+}
+
+
+

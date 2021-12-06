@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/fhad_iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/fhad_bg_skip"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="跳过"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/fhad_rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+</RelativeLayout>

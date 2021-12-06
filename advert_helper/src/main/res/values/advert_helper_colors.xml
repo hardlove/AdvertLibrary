@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorAccent" tools:ignore="ResourceName">#174BA5</color>
+
+    <color name="advert_helper_line_color">#EEEEEE</color>
+</resources>
