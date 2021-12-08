@@ -50,18 +50,18 @@ afterEvaluate {
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'com.github.sqm'
+                groupId = 'com.sqcat.cn'
                 artifactId = 'advert_helper'
-                version = '1.0.7'
+                version = '1.0.8'
             }
             // Creates a Maven publication called “debug”.
 //            debug(MavenPublication) {
 //                // Applies the component for the debug build variant.
 //                from components.debug
 //
-//                groupId = 'com.github.sqm'
+//                groupId = 'com.sqcat.cn'
 //                artifactId = 'advert_helper-debug'
-//                version = '1.0.7'
+//                version = '1.0.8'
 //            }
         }
     }
