@@ -21,8 +21,21 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
+
+            res.srcDirs = [
+                    'src/main/res'
+            ]
+
+            java.srcDirs = [
+                    'src/main/java'
+            ]
+            assets.srcDirs = [
+                    'assets',
+                    'src/main/assets'
+            ]
         }
     }
+
     buildTypes {
         release {
             minifyEnabled true

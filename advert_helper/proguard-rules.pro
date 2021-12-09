@@ -20,6 +20,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 #
+
+-obfuscationdictionary mfilename.txt
+-classobfuscationdictionary mfilename.txt
+-packageobfuscationdictionary mfilename.txt
+
 #
 # 保持类CommonAdvertLoadHelper种 public 方法和 public 变量 不被混淆
 #不混淆资源类下static的

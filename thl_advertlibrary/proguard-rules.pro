@@ -21,6 +21,14 @@
 #-renamesourcefileattribute SourceFile
 #
 #
+
+#-obfuscationdictionary filename.txt
+#-classobfuscationdictionary filename.txt
+#-packageobfuscationdictionary filename.txt
+
+
+
+
 # 保持类CommonAdvertLoadHelper种 public 方法和 public 变量 不被混淆
 #不混淆资源类下static的
 -keep class com.thl.thl_advertlibrary.config.AdvertConfig {
