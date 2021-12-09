@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/tt_custom_dialog_bg"
+    android:background="@drawable/acvert_helper_custom_dialog_bg"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
