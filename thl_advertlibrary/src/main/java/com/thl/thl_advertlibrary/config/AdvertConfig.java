@@ -85,7 +85,7 @@ public class AdvertConfig {
     /**
      * activity 生命周期监听
      */
-    public void initBackgroundCallBack(Application application) {
+    private void initBackgroundCallBack(Application application) {
         application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
@@ -134,7 +134,7 @@ public class AdvertConfig {
      *
      * @param activity
      */
-    protected void back2App(Activity activity) {
+    private void back2App(Activity activity) {
         isRunInBackground = false;
         if (System.currentTimeMillis() - leaveAppTime > advertFreeTime) {//超过十秒回来弹广告
 
@@ -200,7 +200,7 @@ public class AdvertConfig {
      *
      * @param activity
      */
-    protected void leaveApp(Activity activity) {
+    private void leaveApp(Activity activity) {
         try {
             isRunInBackground = true;
             leaveAppTime = System.currentTimeMillis();
@@ -213,7 +213,7 @@ public class AdvertConfig {
         }
     }
 
-    public static String getProcessName(Context context) {
+    private static String getProcessName(Context context) {
         if (context == null) return null;
         ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses()) {
