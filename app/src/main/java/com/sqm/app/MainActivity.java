@@ -14,50 +14,50 @@ import com.thl.thl_advertlibrary.helper.NewTTExpressAdvHelper;
 public class MainActivity extends BaseSplashActivity {
 
     @Override
-    protected void goGuideActivity() {
+    public void goGuideActivity() {
     }
 
     @Override
-    protected void goMainActivity() {
+    public void goMainActivity() {
     }
 
     @Override
-    protected void onUserAgreementClick() {
+    public void onUserAgreementClick() {
     }
 
     @Override
-    protected void onPrivacyPolicyClick() {
+    public void onPrivacyPolicyClick() {
     }
 
     @Override
-    protected int getLayoutResID() {
+    public int getLayoutResID() {
         return R.layout.splash_activity;
     }
 
     @Override
-    protected AgreementStyle getAgreementStyle() {
+    public AgreementStyle getAgreementStyle() {
         return AgreementStyle.STYLE_05;
     }
 
     @Override
-    protected TextView getAdvSkipView() {
+    public TextView getAdvSkipView() {
         return findViewById(R.id.tv_skip);
     }
 
     @Override
-    protected ViewGroup getAdvContainer() {
+    public ViewGroup getAdvContainer() {
         return findViewById(R.id.rl_content);
     }
 
     /*显示协议回调*/
     @Override
-    protected void onShowUserAgreement() {
+    public void onShowUserAgreement() {
 
     }
 
     /*同意协议回调*/
     @Override
-    protected void onUserAcceptAgreement() {
+    public void onUserAcceptAgreement() {
 
     }
 }

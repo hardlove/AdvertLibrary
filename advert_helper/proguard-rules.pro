@@ -30,6 +30,7 @@
 
 -keep enum  com.sqm.advert_helper.adv.** {*;}
 -keep class  com.sqm.advert_helper.adv.BaseSplashActivity {*;}
+-keep class  com.sqm.advert_helper.adv.AdvManagerAbstract {*;}
 
 
 

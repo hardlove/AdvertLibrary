@@ -33,12 +33,12 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.3.0'
-    implementation project(path: ':advert_helper')
-    implementation project(path: ':thl_advertlibrary')
+//    implementation project(path: ':advert_helper')
+//    implementation project(path: ':thl_advertlibrary')
 //    implementation 'com.github.hardlove:AdvertLibrary:v1.0.7'
 
-
-//    implementation fileTree("D:\\Mine\\CommLibs")
+    api 'com.blankj:utilcodex:1.30.6'
+    implementation fileTree("D:\\Mine\\CommLibs")
 //    implementation files("D:\\Mine\\CommLibs\\advert_helper-release-1.0.7.aar")
 //    implementation files("D:\\Mine\\CommLibs\\thl_advertlibrary-release-1.0.7.aar")
 
