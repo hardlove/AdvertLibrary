@@ -1,0 +1,33 @@
+
+编号 位置名称
+open 19-开屏广告
+banner 19-轮播banner
+finish 19-完成页
+cancel 19-支付成功(取消)
+quit 19-退出广告
+float 19-浮标广告
+button 19-小图标
+Lock 19-看视频解锁
+active 19-后台拉起
+payed 20-支付成功
+chapin1 20-2:3插屏广告1
+neirong1 20-横幅1-600x300
+neirong2 20-横幅2-600x400
+apptab 20-Tab页广告
+flow 20-信息流
+chapin2 20-1:1插屏广告2
+chapin3 20-3:2插屏广告3
+neirong3 20-横幅3-600x500
+TTFullScreenVideoAd 20-穿山甲全屏视频
+neirong5 20-横幅5-600x90
+neirong6 20-横幅6-600x150
+mainpage 20-首页活动展示
+drawflow 20-穿山甲Draw信息流
+mainad 21-首页插屏
+addlock 21-附加激励视频
+newinsert 21-穿山甲新插屏
+activemulti 22-拉起-多样式
+mainadmulti 22-首页-多样式
+finishmulti 22-完成-多样式
+quitmulti 22-退出-多样式
+    

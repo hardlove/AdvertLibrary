@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.thl.thl_advertlibrary.BuildConfig;
 import com.thl.thl_advertlibrary.activity.Fhad_BaseSplashActivity;
 import com.thl.thl_advertlibrary.dialog.BackgroundAdvertDialog;
-import com.thl.thl_advertlibrary.helper.TTExpressAdvHelper;
+import com.thl.thl_advertlibrary.helper.NewTTExpressAdvHelper;
 import com.thl.thl_advertlibrary.network.bean.AdvertModel;
 import com.thl.thl_advertlibrary.network.bean.FreeTimeModel;
 import com.thl.thl_advertlibrary.network.bean.UrlInterceptModel;
@@ -144,8 +144,8 @@ public class AdvertConfig {
                     if (useExpressAdv) {
                         if (!expressAdvIsShowing) {
                             expressAdvIsShowing = true;
-                            TTExpressAdvHelper ttExpressAdvHelper = new TTExpressAdvHelper((ComponentActivity) activity, "active");
-                            ttExpressAdvHelper.showAdvert(new TTExpressAdvHelper.TTExpressAdvListener() {
+                            NewTTExpressAdvHelper ttExpressAdvHelper = new NewTTExpressAdvHelper((ComponentActivity) activity, NewTTExpressAdvHelper.TYPE_ACTIVE);
+                            ttExpressAdvHelper.showAdvert(new NewTTExpressAdvHelper.TTExpressAdvListener() {
                                 @Override
                                 public void onSkip() {
                                     expressAdvIsShowing = false;

@@ -1,7 +1,6 @@
-plugins {
-    id 'com.android.library'
-    id 'maven-publish'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.sqm'
 android {
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
@@ -22,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,33 +37,5 @@ dependencies {
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
 }
 
-
-// Because the components are created only during the afterEvaluate phase, you must
-// configure your publications using the afterEvaluate() lifecycle method.
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components.release
-
-                // You can then customize attributes of the publication as shown below.
-                groupId = 'com.sqcat.cn'
-                artifactId = 'advert_helper'
-                version = '1.0.8'
-            }
-            // Creates a Maven publication called “debug”.
-//            debug(MavenPublication) {
-//                // Applies the component for the debug build variant.
-//                from components.debug
-//
-//                groupId = 'com.sqcat.cn'
-//                artifactId = 'advert_helper-debug'
-//                version = '1.0.8'
-//            }
-        }
-    }
-}
 
 

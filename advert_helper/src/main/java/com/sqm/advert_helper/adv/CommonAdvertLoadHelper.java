@@ -22,6 +22,7 @@ import com.stx.xhb.xbanner.entity.SimpleBannerInfo;
 import com.thl.thl_advertlibrary.helper.BannerAdvertHelper;
 import com.thl.thl_advertlibrary.helper.InterBannerAdvertHelper;
 import com.thl.thl_advertlibrary.helper.NewInterstitialAdvertHelper;
+import com.thl.thl_advertlibrary.helper.NewTTExpressAdvHelper;
 import com.thl.thl_advertlibrary.helper.TTAdRewardVideoHelper;
 import com.thl.thl_advertlibrary.helper.TTAdVideoHelper;
 import com.thl.thl_advertlibrary.network.bean.AdvertModel;
@@ -218,14 +219,14 @@ public class CommonAdvertLoadHelper {
         mXBanner.startAutoPlay();
     }
 
-    /*显示插屏广告*/
+    /*显示插屏广告（老插屏*/
 
     /**
      * 方法已过时
-     * @see #showExpressAdv(FragmentActivity, String, TTExpressAdvHelper.TTExpressAdvListener)
      *
      * @param activity
      * @param listener
+     * @see #showExpressAdv(FragmentActivity, String, TTExpressAdvHelper.TTExpressAdvListener)
      */
     @Deprecated
     public static void showExpressAdv(FragmentActivity activity, TTExpressAdvHelper.TTExpressAdvListener listener) {
@@ -233,17 +234,27 @@ public class CommonAdvertLoadHelper {
         ttExpressAdvHelper.showAdvert(listener);
     }
 
-    /*显示插屏广告*/
+    /*显示插屏广告（老插屏）*/
     public static void showExpressAdv(FragmentActivity activity, @TTExpressAdvHelper.AdvTypeConfig String advType, TTExpressAdvHelper.TTExpressAdvListener listener) {
         TTExpressAdvHelper ttExpressAdvHelper = new TTExpressAdvHelper(activity, advType);
         ttExpressAdvHelper.showAdvert(listener);
     }
 
-    /*显示新插屏广告*/
-    public static void shoNewExpressAdv(FragmentActivity activity,NewInterstitialAdvertHelper.OnAdvertCallback callback) {
+    /*显示新插屏广告
+     * 杜江提供
+     * */
+    public static void shoNewExpressAdv(FragmentActivity activity, NewInterstitialAdvertHelper.OnAdvertCallback callback) {
         NewInterstitialAdvertHelper newInterstitialAdvertHelper = new NewInterstitialAdvertHelper(new WeakReference<>(activity), "newinsert");
         newInterstitialAdvertHelper.setCallback(callback);
         newInterstitialAdvertHelper.loadNewInterstitialAd();
 
+    }
+
+    /*显示新插屏广告
+     * 兼容老插屏，替换老插屏时只需要重新导包，不需修改原有代码逻辑
+     * */
+    public static void shoNewExpressAdv(FragmentActivity activity, NewTTExpressAdvHelper.TTExpressAdvListener listener, @NewTTExpressAdvHelper.AdvTypeConfig String location) {
+        NewTTExpressAdvHelper ttExpressAdvHelper = new NewTTExpressAdvHelper(activity, location);
+        ttExpressAdvHelper.showAdvert(listener);
     }
 }

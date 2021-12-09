@@ -2,6 +2,7 @@ package com.thl.thl_advertlibrary.network;
 
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.os.Handler;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
@@ -37,6 +38,7 @@ public class Fhad_HttpMethodUtils {
     public static final String url_clickRate = "/LR_WaterMark/AppData/InfoView";
     public static final String url_intercept = "/Browser/AppApi/GetWebViewH5";
     public static final String url_freeTime = "/Browser/AdApi/GetAppSet";
+    private static final long delayTime = 1000 * 5;
 
     /**
      * 更新广告控制
@@ -63,8 +65,12 @@ public class Fhad_HttpMethodUtils {
                         }
                     }
                 });
-        setAdvertFreeTime(context);
-        interceptAdvert();
+        //延时执行，避免开屏时界面卡死
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            setAdvertFreeTime(context);
+            interceptAdvert();
+        }, delayTime);
     }
 
     /**
@@ -99,8 +105,14 @@ public class Fhad_HttpMethodUtils {
                 .addParams("appName", Fhad_PackageUtil.getPackageName(context))
                 .build()
                 .execute(callBack);
-        setAdvertFreeTime(context);
-        interceptAdvert();
+
+        //延时执行，避免开屏时界面卡死
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            setAdvertFreeTime(context);
+            interceptAdvert();
+        }, delayTime);
+
     }
 
     /**
@@ -116,8 +128,13 @@ public class Fhad_HttpMethodUtils {
                 .addParams("appName", Fhad_PackageUtil.getPackageName(context))
                 .build()
                 .execute(callBack);
-        setAdvertFreeTime(context);
-        interceptAdvert();
+
+        //延时执行，避免开屏时界面卡死
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            setAdvertFreeTime(context);
+            interceptAdvert();
+        }, delayTime);
     }
 
     /**
